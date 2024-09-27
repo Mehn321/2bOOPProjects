@@ -7,38 +7,25 @@
 </head>
 <body>
     <form action="" method="post">
-        <button name="sunday">Sunday</butto>
-        <button name="monday">Monday</button>
-        <button name="tuesday">Tuesday</button>
-        <button name="wednesday">Wednesday</button>
-        <button name="thursday">Thursday</button>
-        <button name="friday">Friday</button>
-        <button name="saturday">Saturday</button>
+        <label for="">num1</label>
+        <input type="number" name="num1">
+        <label for="">num2</label>
+        <input type="number" name="num2"><br>
+
+        <button name="submit">sum</button>
+
 
     </form>
 </body>
 </html>
 
 <?php
-    if(isset($_POST['sunday'])){
-        echo"Sunday";
-    }
-    elseif(isset($_POST['monday'])){
-        echo"Monday";
-    }
-    elseif(isset($_POST['tuesday'])){
-        echo"Tuesday";
-    }
-    elseif(isset($_POST['wednesday'])){
-        echo" Wednesday";
-    }
-    elseif(isset($_POST['thursday'])){
-        echo"Thursday";
-    }
-    elseif(isset($_POST['friday'])){
-        echo "Friday";
-    }
-    elseif(isset($_POST['saturday'])){
-        echo"Saturday";
+    if(isset($_POST['submit'])) {
+        $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+        echo "the sum of $num1 and $num2 is ", $num1+$num2,"<br>";
+        echo "the difference of $num1 and $num2 is ", $num1-$num2,"<br>";
+        echo "the product of $num1 and $num2 is ", $num1*$num2,"<br>";
+        echo "the qoutient of $num1 and $num2 is ", $num1/$num2,"<br>";
     }
 ?>
