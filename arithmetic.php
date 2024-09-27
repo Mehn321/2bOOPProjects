@@ -12,10 +12,7 @@
         <label for="">num2</label>
         <input type="number" name="num2"><br>
 
-        <button name="sum">sum</button>
-        <button name="difference">difference</button>
-        <button name="product">product</button>
-        <button name="qoutient">qoutient</button>
+        <button name="submit">sum</button>
 
 
     </form>
@@ -23,24 +20,12 @@
 </html>
 
 <?php
-    if(isset($_POST['sum'])) {
+    if(isset($_POST['submit'])) {
         $num1 = $_POST['num1'];
         $num2 = $_POST['num2'];
-        echo "the sum of $num1 and $num2 is ", $num1+$num2;
-    }
-    elseif(isset($_POST['difference'])) {
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-        echo "the difference of $num1 and $num2 is ", $num1-$num2;
-    }
-    elseif(isset($_POST['product'])) {
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-        echo "the product of $num1 and $num2 is ", $num1*$num2;
-    }
-    elseif(isset($_POST['qoutient'])) {
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-        echo "the qoutient of $num1 and $num2 is ", $num1/$num2;
+        echo "the sum of $num1 and $num2 is ", $num1+$num2,"<br>";
+        echo "the difference of $num1 and $num2 is ", $num1-$num2,"<br>";
+        echo "the product of $num1 and $num2 is ", $num1*$num2,"<br>";
+        echo "the qoutient of $num1 and $num2 is ", $num1/$num2,"<br>";
     }
 ?>
